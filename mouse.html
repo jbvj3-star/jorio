@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Loja Conexão</title>
+  <meta name="description" content="Loja Conexão Informática - Tecnologia e soluções.">
+  <meta name="keywords" content="informática, loja, tecnologia, conexão, produtos">
+
+  <!-- Favicons -->
+   <link href="assets/img/logopj-removebg-preview.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@400;500;700&family=Raleway:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+</head>
+
+<body class="portfolio-page">
+
+  <!-- Header -->
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+       <img src="assets/img/Logo_Conexão_-removebg-preview.png" alt="Conexão informática" class="logo">
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="about.html">Projeto</a></li>
+          <li><a href="services.html">Ferramentas</a></li>
+          <li><a href="portfolio.html" class="active">Loja</a></li>
+          <li><a href="resume.html">Conexão DEV</a></li>
+          <li><a href="idealizador.html">Idealizador</a></li>
+          <li><a href="contact.html">Contato</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+
+    </div>
+  </header>
+ 
+  <main>
+
+    <div class="produto">
+  <div class="inform">
+    <h2>Mouse Óptico com Iluminação RGB Exbom</h2>
+    <p> • Modelo: MS-62 <br>
+        • DPI: 1200 DPI <br>
+        • Iluminação: LED RGB com 7 cores alternadas <br>
+        • Botões: 3 (esquerdo, direito e scroll) <br>
+        • Conexão: USB com fio <br>
+        • Comprimento do cabo: Aproximadamente 1,3 metros <br>
+        • Design: Ergonômico, leve e confortável <br>
+    </p>
+    <div class="preco">R$ 28,00</div>
+
+    <div class="pagamento-container">
+  <p class="pagamento-titulo">Aceitamos <strong>PIX</strong> e cartões:</p>
+  <div class="pagamento-metodos">
+    <img src="assets/img/png-transparent-logo-mastercard-product-font-mastercard-text-orange-logo-removebg-preview.png" alt="MasterCard">
+    <img src="assets/img/visa-logo-2-removebg-preview.png" alt="Visa">
+    <img src="assets/img/elo.png" alt="Elo">
+     <img src="assets/img/Hipercard_logo.svg.png" alt="Elo">
+    
+  </div>
+</div>
+
+    <a class="btn-buy" href="https://wa.me/5582991853832" target="_blank">
+    <img src="assets/img/icons8-whatsapp-48.png"> Chama no WhatsApp
+  </a>
+  </div>
+  <div class="image">
+    <img src="assets/img/mouse.png" alt="Produto">
+  </div>
+</div>
+
+
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+    <div class="container">
+      <h3 class="sitename">Projeto Conexão Informática</h3>
+      <p><strong>Uma rede de possibilidades!</strong></p>
+      <div class="container">
+        <div class="copyright">
+          <strong>Todos os direitos reservados 2025</strong>
+        </div>
+        <div class="credits">
+          Projeto Conexão Informática
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const container = document.querySelector('.image');
+    const img = container.querySelector('img');
+
+    container.addEventListener('mousemove', e => {
+      const rect = container.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width) * 100;
+      const y = ((e.clientY - rect.top) / rect.height) * 100;
+
+      img.style.transformOrigin = `${x}% ${y}%`;
+    });
+
+    container.addEventListener('mouseleave', () => {
+      img.style.transformOrigin = 'center center';
+    });
+  });
+</script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

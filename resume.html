@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conexão DEV - Equipe & Portfólio</title>
+  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
+  <link rel="icon" href="assets/img/logopj-removebg-preview.png">
+  <style>
+body {
+  margin: 0;
+  font-family: 'Poppins', Arial, sans-serif;
+  background: #10131a;
+  color: #fff;
+}
+.resume-header {
+  background: #0a1833;
+  color: #fff;
+  padding: 0.5rem 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.resume-header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+.resume-logo img {
+  height: 48px;
+}
+.resume-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+.resume-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.resume-nav a.active,
+.resume-nav a:hover {
+  color: #1e90ff;
+}
+.resume-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem 0 1rem;
+  width: 100%;
+}
+.resume-hero {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+.resume-hero h1 {
+  font-size: 2.2rem;
+  color: #1e90ff;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+.resume-hero-desc {
+  color: #ffe600;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+.vertical-carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+.vertical-carousel {
+  width: 160px;
+  height: 320px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.18);
+  background: #181c22;
+}
+.vertical-carousel-inner {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+  animation: scroll-up 8s linear infinite;
+}
+.vertical-carousel.reverse .vertical-carousel-inner {
+  animation: scroll-down 8s linear infinite;
+}
+.vertical-carousel img {
+  width: 100%;
+  height: 80px;
+  object-fit: cover;
+  display: block;
+  border-bottom: 2px solid #10131a;
+}
+@keyframes scroll-up {
+  0% { top: 0; }
+  100% { top: -320px; }
+}
+@keyframes scroll-down {
+  0% { top: -320px; }
+  100% { top: 0; }
+}
+.resume-services {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2.5rem 0 2rem 0;
+}
+.resume-service-card {
+  background: #181c22;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  padding: 1.5rem 1.2rem;
+  text-align: center;
+  width: 220px;
+}
+.resume-service-card h3 {
+  color: #1e90ff;
+  margin-bottom: 0.5rem;
+}
+.resume-service-card i {
+  font-size: 2rem;
+  color: #ffe600;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+.resume-trabalhos {
+  text-align: center;
+  margin: 2.5rem 0 1.5rem 0;
+}
+.resume-trabalhos h2 {
+  color: #1e90ff;
+  margin-bottom: 0.5rem;
+}
+.resume-portfolio {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+.resume-portfolio-card {
+  background: #1e90ff;
+  color: #181c22;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  padding: 1.5rem 1.2rem;
+  text-align: center;
+  width: 220px;
+}
+.resume-portfolio-card h4 {
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+.resume-site-footer {
+  background: #0a1833;
+  color: #fff;
+  text-align: center;
+  padding: 1.2rem 0.5rem 0.7rem 0.5rem;
+  margin-top: auto;
+  width: 100vw;
+  box-sizing: border-box;
+}
+.resume-footer-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.resume-site-footer p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+.resume-footer-copyright {
+  border-top: 1px solid #1e90ff;
+  padding-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+.resume-footer-credits {
+  font-size: 0.95rem;
+  color: #1e90ff;
+}
+@media (max-width: 900px) {
+  .resume-main {
+    max-width: 100vw;
+    padding: 1rem 0.5rem 0 0.5rem;
+  }
+  .resume-services, .resume-portfolio {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .vertical-carousel-container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+  </style>
+</head>
+<body>
+  <!-- Barra de menu -->
+  <header class="resume-header">
+    <div class="resume-header-container">
+      <a href="index.html" class="resume-logo">
+        <img src="assets/img/Logo_Conexão_-removebg-preview.png" alt="Conexão Informática">
+      </a>
+      <nav class="resume-nav">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="about.html">Projeto</a></li>
+          <li><a href="services.html">Ferramentas</a></li>
+          <li><a href="portfolio.html">Loja</a></li>
+          <li><a href="resume.html" class="active">Conexão DEV</a></li>
+          <li><a href="idealizador.html">Idealizador</a></li>
+          <li><a href="contact.html">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="resume-main">
+    <!-- Hero/banner -->
+    <section class="resume-hero">
+      <h1>Desenvolvemos<br>aplicativos mobile<br>e sistemas web</h1>
+      <p class="resume-hero-desc">Soluções digitais para problemas reais</p>
+        </section>
+    <!-- Carrossel vertical duplo -->
+    <div class="vertical-carousel-container">
+      <div class="vertical-carousel">
+        <div class="vertical-carousel-inner">
+                        <img src="assets/img/EVERTON.jpg" alt="Imagem Carrossel 1">
+                        <img src="assets/img/front-end-removebg-preview.png" alt="Imagem Carrossel 2">
+                        <img src="assets/img/foto 3.jpeg" alt="Imagem Carrossel 3">
+                        <img src="assets/img/foto 4.jpg" alt="Imagem Carrossel 4">
+          <img src="assets/img/EVERTON.jpg" alt="Imagem Carrossel 1">
+                    </div>
+                </div>
+      <div class="vertical-carousel reverse">
+        <div class="vertical-carousel-inner">
+                        <img src="assets/img/back-end-removebg-preview.png" alt="Imagem Carrossel 5">
+                        <img src="assets/img/LUANNA.jpg" alt="Imagem Carrossel 6">
+                        <img src="assets/img/dados-removebg-preview.png" alt="Imagem Carrossel 7">
+                        <img src="assets/img/foto 1.jpeg" alt="Imagem Carrossel 8">
+          <img src="assets/img/back-end-removebg-preview.png" alt="Imagem Carrossel 5">
+                    </div>
+                </div>
+            </div>
+    <!-- Cards de serviços -->
+    <section class="resume-services">
+      <div class="resume-service-card">
+        <i class="bi bi-phone"></i>
+        <h3>App Mobile</h3>
+        <p>Desenvolvemos soluções para as plataformas IOS e Android, permitindo que seus usuários alcancem soluções com a palma das mãos.</p>
+  </div>
+      <div class="resume-service-card">
+        <i class="bi bi-laptop"></i>
+        <h3>Sistemas Web</h3>
+        <p>Criamos sistemas para melhorar o gerenciamento de sua empresa e integrar diversos setores de forma automatizada.</p>
+  </div>
+      <div class="resume-service-card">
+        <i class="bi bi-code-slash"></i>
+        <h3>Design UI/UX</h3>
+        <p>Projetamos softwares centrados nos usuários, utilizando as melhores práticas de design para proporcionar uma experiência agradável.</p>
+  </div>
+</section>
+    <!-- Nossos Trabalhos -->
+    <section class="resume-trabalhos">
+      <h2>Nossos Trabalhos</h2>
+      <p>De startups até grandes empresas, entregamos inteligência em produtos que facilitam o dia a dia, gerando menos desperdício, criando assim, mais oportunidades de negócio.</p>
+    </section>
+    <!-- Cards de portfólio -->
+    <section class="resume-portfolio">
+      <div class="resume-portfolio-card">
+        <h4>Web</h4>
+        <p>"Criamos sites e sistemas web que unem design, performance e acessibilidade em qualquer dispositivo."</p>
+      </div>
+      <div class="resume-portfolio-card">
+        <h4>Mobile</h4>
+              <p>"Desenvolvemos aplicativos mobile modernos e funcionais, levando soluções inteligentes para a palma da sua mão."</p>
+            </div>
+      <div class="resume-portfolio-card">
+        <h4>Desktop</h4>
+              <p>"Criamos softwares desktop poderosos que entregam performance e controle total para o usuário."</p>
+            </div>
+    </section>
+  </main>
+
+  <footer class="resume-site-footer">
+    <h3 class="resume-footer-title">Projeto Conexão Informática</h3>
+      <p><strong>Uma rede de possibilidades!</strong></p>
+    <div class="resume-footer-copyright">
+      <strong>Todos os direitos reservados 2025</strong>
+        </div>
+    <div class="resume-footer-credits">
+          Projeto Conexão Informática
+    </div>
+  </footer>
+</body>
+</html>
